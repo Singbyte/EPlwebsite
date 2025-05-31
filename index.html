@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPL - News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>English Premier League</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">News</a></li>
+          <li><a href="table.html">Table & Fixtures</a></li>
+          <li><a href="live.html">Live Scores</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Latest EPL News</h2>
+    <div id="news-container" class="card-grid">
+      <div class="loading"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 English Premier League Interactive Portal</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Load news when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      loadNews();
+    });
+  </script>
+</body>
+</html>

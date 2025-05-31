@@ -1,0 +1,207 @@
+/* Basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background-color: #37003c; /* EPL Purple */
+  color: white;
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a.active {
+  background-color: #00ff85; /* EPL Green */
+  color: #37003c;
+  border-radius: 4px;
+}
+
+/* Main content */
+main {
+  padding: 20px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #37003c;
+  border-bottom: 2px solid #00ff85;
+  padding-bottom: 5px;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #37003c;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #37003c;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #37003c;
+  color: white;
+}
+
+/* Match cards */
+.match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+.live-badge {
+  background-color: red;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+/* Loading and errors */
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+}
+
+.loading::after {
+  content: "Loading...";
+}
+
+.error {
+  color: red;
+}
+
+/* Footer */
+footer {
+  background-color: #37003c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    margin-top: 15px;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .match {
+    flex-direction: column;
+  }
+  
+  .team {
+    margin: 10px 0;
+  }
+}
